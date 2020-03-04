@@ -110,6 +110,8 @@ public class Main {
                             "Что хотите записать дальше?");
                     break;
                 default:
+                    System.out.println("Нужно вводить цифры от 1 до 9");
+                    System.out.println();
                     break;
             }
             menu.content();
