@@ -37,6 +37,7 @@ public class Main {
         } else {
             System.out.println("Чтобы создать контакт надо ввести 1");
         }
+        while (rl = true) {
         int act2 = sc.nextInt();
             switch (act2) {
                 case (1):
@@ -45,7 +46,6 @@ public class Main {
                     user.setName(name);
                     System.out.println("Имя контакта записано успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
 
 
@@ -55,7 +55,6 @@ public class Main {
                     user.setSurname(surname);
                     System.out.println("Имя контакта записано успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
 
 
@@ -65,7 +64,6 @@ public class Main {
                     user.setNickname(nickname);
                     System.out.println("Прозвище контакта записано успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
 
                 case (4):
@@ -74,7 +72,6 @@ public class Main {
                     user.setHomenumber(homenumber);
                     System.out.println("Домашний номер записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
 
                 case (5):
@@ -83,7 +80,6 @@ public class Main {
                     user.setJobnumber(jobnumber);
                     System.out.println("Рабочий номер записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
                 case (6):
                     System.out.println("Мобильный номер:");
@@ -91,7 +87,6 @@ public class Main {
                     user.setMobilenumber(mobilenumber);
                     System.out.println("Мобильный номер записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
                 case (7):
                     System.out.println("Факс:");
@@ -99,7 +94,6 @@ public class Main {
                     user.setFax(fax);
                     System.out.println("Факс записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
                 case (8):
                     System.out.println("Введите email:");
@@ -107,7 +101,6 @@ public class Main {
                     user.setEmail(email);
                     System.out.println("Email записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
                 case (9):
                     System.out.println("Введите email:");
@@ -115,9 +108,11 @@ public class Main {
                     user.setAge(age);
                     System.out.println("Год рождения записан успешно \n" +
                             "Что хотите записать дальше?");
-                    menu.content();
                     break;
-
+                default:
+                    break;
+            }
+            menu.content();
         }
     }
 }
