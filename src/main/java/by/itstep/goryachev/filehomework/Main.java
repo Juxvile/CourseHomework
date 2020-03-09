@@ -23,7 +23,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         boolean rl = true;
-        User user = new User();
         Menu menu = new Menu();
         menu.contact();
         Scanner sc = new Scanner(System.in);
