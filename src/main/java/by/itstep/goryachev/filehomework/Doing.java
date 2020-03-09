@@ -1,44 +1,38 @@
 package by.itstep.goryachev.filehomework;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Doing {
-    public static void thismenu (int number) {
-        List<String> result = new ArrayList<>();
+    public static void thismenu () {
         User user = new User();
         Menu menu = new Menu();
         Scanner sc = new Scanner(System.in);
-        int number1 = sc.nextInt();
-        switch (number) {
+        int act2 = sc.nextInt();
+        switch (act2) {
             case (1):
                 System.out.println("Имя контакта:");
-                String name = sc.nextLine();
+                String name = sc.next();
                 user.setName(name);
                 System.out.println("Имя контакта записано успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
 
 
             case (2):
                 System.out.println("Фамилия контакта:");
-                String surname = sc.nextLine();
+                String surname = sc.next();
                 user.setSurname(surname);
                 System.out.println("Имя контакта записано успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
 
 
             case (3):
                 System.out.println("Прозвище контакта:");
-                String nickname = sc.nextLine();
+                String nickname = sc.next();
                 user.setNickname(nickname);
                 System.out.println("Прозвище контакта записано успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
 
             case (4):
@@ -47,7 +41,6 @@ public class Doing {
                 user.setHomenumber(homenumber);
                 System.out.println("Домашний номер записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
 
             case (5):
@@ -56,7 +49,6 @@ public class Doing {
                 user.setJobnumber(jobnumber);
                 System.out.println("Рабочий номер записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
             case (6):
                 System.out.println("Мобильный номер:");
@@ -64,7 +56,6 @@ public class Doing {
                 user.setMobilenumber(mobilenumber);
                 System.out.println("Мобильный номер записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
             case (7):
                 System.out.println("Факс:");
@@ -72,15 +63,13 @@ public class Doing {
                 user.setFax(fax);
                 System.out.println("Факс записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
             case (8):
                 System.out.println("Введите email:");
-                String email = sc.nextLine();
+                String email = sc.next();
                 user.setEmail(email);
                 System.out.println("Email записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
                 break;
             case (9):
                 System.out.println("Введите email:");
@@ -88,8 +77,12 @@ public class Doing {
                 user.setAge(age);
                 System.out.println("Год рождения записан успешно \n" +
                         "Что хотите записать дальше?");
-                menu.content();
+                break;
+            default:
+                System.out.println("Нужно вводить цифры от 1 до 9");
+                System.out.println();
                 break;
         }
+        menu.content();
     }
 }
