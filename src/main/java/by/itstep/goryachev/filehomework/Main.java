@@ -17,29 +17,10 @@ package by.itstep.goryachev.filehomework;
 //        ■ электронные адреса (проверка на корректность);
 //        ■ год рождения.
 
-import java.util.Scanner;
-
 
 public class Main {
-    public static void main(String[] args) {
-        boolean rl = true;
-        Menu menu = new Menu();
-        menu.contact();
-        Scanner sc = new Scanner(System.in);
-        while (!sc.hasNextInt()) {
-            System.out.println("Чтобы создать контакт надо ввести 1");
-            sc.nextLine();
-        }
-        int act1 = sc.nextInt();
-        if (act1 == 1) {
-            menu.content();
-        } else {
-            System.out.println("Чтобы создать контакт надо ввести 1");
-        }
-        while (rl = true) {
-            Doing.thismenu();
-        }
+    public static void main(String[] args) throws Exception{
+        Doing.infiniteMenu();
+
     }
 }
-
-
