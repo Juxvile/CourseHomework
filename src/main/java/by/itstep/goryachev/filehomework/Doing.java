@@ -58,13 +58,14 @@ public class Doing {
     }
     public static void thisMenu () throws IOException {
         User user = new User();
-        FileWriter contacts = new FileWriter("Users.txt");
+        ObjectOutputStream contacts = new ObjectOutputStream(new FileOutputStream("Users.txt"));
+//        FileOutputStream contacts = new FileOutputStream("Users.txt");
         switch (sc.next()) {
             case ("1"):
                 System.out.println("Имя контакта:");
                 String name = sc.next();
                 user.setName(name);
-                contacts.write(name);
+                contacts.write(name.getBytes());
                 System.out.println("Имя контакта записано успешно \n" +
                         "Что хотите записать дальше?");
                 break;
