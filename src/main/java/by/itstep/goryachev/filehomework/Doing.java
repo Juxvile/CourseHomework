@@ -46,6 +46,12 @@ public class Doing {
                 rl = true;
                 break;
             case "2":
+                try (ObjectInputStream showcontacts = new ObjectInputStream(new FileInputStream("Users.txt"))){
+                    User user = (User)showcontacts.readObject();
+                    System.out.println(user.getName() + " " + user.getSurname() + " " + user.getNickname() + " " + user.getAge() + " " + user.getEmail());
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
             case "3":
                 break;
@@ -65,7 +71,6 @@ public class Doing {
                 System.out.println("Имя контакта:");
                 String name = sc.next();
                 user.setName(name);
-                contacts.write(name.getBytes());
                 System.out.println("Имя контакта записано успешно \n" +
                         "Что хотите записать дальше?");
                 break;
@@ -136,6 +141,7 @@ public class Doing {
                         "Что хотите записать дальше?");
                 break;
             case ("0"):
+                contacts.writeObject(user);
                 rl = false;
                 break;
             default:
@@ -156,6 +162,6 @@ public class Doing {
                 "7. Ввести факс.\n" +
                 "8. Ввести email.\n" +
                 "9. Ввести год рождения.\n" +
-                "0. Выход в предыдущее меню.");
+                "0. Сохранить и выйти.");
     }
 }
