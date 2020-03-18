@@ -1,6 +1,6 @@
 package by.itstep.goryachev.filehomework;
 
-public class MobileNumber extends User{
+public class MobileNumber {
     private String mobileNumber;
 
     public String getMobileNumber() {

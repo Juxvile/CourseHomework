@@ -42,6 +42,6 @@ class Bank {
 
 class Fasade {
     void addMoney (int c){
-        
+
     }
 }

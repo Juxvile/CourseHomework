@@ -1,6 +1,6 @@
 package by.itstep.goryachev.filehomework;
 
-public class Fax extends User{
+public class Fax {
     private String fax;
 
     public String getFax() {

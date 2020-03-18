@@ -1,7 +1,7 @@
 package by.itstep.goryachev.filehomework;
 
 
-public class HouseNumber extends User{
+public class HouseNumber {
     private String housenumber;
 
     public HouseNumber() {

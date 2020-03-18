@@ -1,7 +1,7 @@
 package by.itstep.goryachev.filehomework;
 
 
-public class JobNumber extends User{
+public class JobNumber {
     private String jobNumber;
 
     public JobNumber() {
