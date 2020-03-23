@@ -18,8 +18,8 @@ public class CalculatorImpl implements Calculator{
     }
 
     @Override
-    public double div(int a, int b) {
-        return (double)a / b;
+    public void div(int a, int b) {
+        System.out.println((double) a / b);
     }
 
 //    public static void main(String[] args) {

@@ -9,7 +9,11 @@ public class UserManagerImpl implements UserManager{
     List <User> userList = new ArrayList<User>();
 
     @Override
-    public User addUser(String firstname, String lastname, int age, String sex) {
-        return new User(firstname,lastname,age,sex);
+    public void addUser(String firstname, String lastname, int age, String sex) {
+        User user = new User (firstname, lastname, age, sex);
+        if (!userList.contains(user)){
+            userList.add(user);
+        }
+        new User(firstname,lastname,age,sex);
     }
 }

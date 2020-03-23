@@ -2,5 +2,5 @@ package by.itstep.goryachev.tdd.userManager;
 
 
 public interface UserManager {
-    User addUser(String firstname, String lastname, int age, String sex);
+    void addUser(String firstname, String lastname, int age, String sex);
 }

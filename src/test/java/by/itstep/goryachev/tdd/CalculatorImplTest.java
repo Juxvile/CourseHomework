@@ -1,7 +1,9 @@
 package by.itstep.goryachev.tdd;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.*;
 
@@ -29,10 +31,29 @@ public class CalculatorImplTest {
 //        fail("Not implemented");
 //    }
 //
+//    @Test
+//    public void divisionWithArithmeticException (){
+//        try {
+//            calculator.div(1, 0);
+//            fail("gdgfg dgfdgd dfgdfg");
+//        } catch (ArithmeticException ex){
+//            assertEquals("", "", ex.getMessage());
+//        }
+//    }
+    @Rule
+    public ExpectedException exceptionRule = ExpectedException.none();
+
+    @Test
+    public void divisionWithArithmeticException (){
+        exceptionRule.expect(ArithmeticException.class);
+        exceptionRule.expectMessage("/ by zero");
+        calculator.div(1,0);
+    }
+
     @Test
     public void div() throws Exception {
-        assertEquals(1,calculator.div(20,20), 0.00001);
-        assertEquals (0.5, calculator.div(20,40), 0.0001);
+//        assertEquals(1,calculator.div(20,20), 0.00001);
+//        assertEquals (0.5, calculator.div(20,40), 0.0001);
     }
 
 

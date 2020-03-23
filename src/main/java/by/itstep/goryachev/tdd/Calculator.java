@@ -8,6 +8,14 @@ public interface Calculator {
 //    умножение
     int mul (int a, int b);
 //    деление
-    double div (int a, int b);
+    void div (int a, int b);
+}
+
+class Run {
+    public static void main(String[] args) {
+        Calculator calculator = new CalculatorImpl();
+        calculator.div(1,0);
+
+    }
 }
 
