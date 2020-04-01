@@ -45,6 +45,8 @@ public class Shop {
                 listcomics.close();
                 break;
             case "3":
+                comicsmenu();
+                comicscreator();
                 break;
             case "4":
                 comicsArrayList.remove(thisnewcomics);
@@ -239,7 +241,7 @@ public class Shop {
             case ("3"):
                 System.out.println("Введите жанр");
                 String genre = sc.next();
-                if (thisnewcomics.getAutorname().startsWith(genre)) {
+                if (thisnewcomics.getGenre().startsWith(genre)) {
                     System.out.println("Найден комикс " + thisnewcomics.getName());
                 } else {
                     System.out.println("Ничего не найдено");
